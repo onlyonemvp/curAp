@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
         <import type="android.view.View"/>
@@ -34,6 +35,16 @@
             android:onClick="@{viewModel.btOnclick}"
             android:visibility="@{viewModel.isShow()?View.VISIBLE:View.GONE}"
             />
+
+        <com.example.myapplication.view.CustomProgressView
+            android:id="@+id/cvv"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:buttonColor="@color/white"
+            app:progress="30"
+            app:progressBgColor="@color/gray"
+            app:progressFgColor="@color/blue_1"
+            app:textColor="@color/white" />
 
 
     </LinearLayout>
